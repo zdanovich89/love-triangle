@@ -5,7 +5,7 @@
 module.exports = function getLoveTrianglesCount(preferences = []) {
   // your implementation
   let length = preferences.length; 
-  let count = 0;  
+  let sum = 0;  
   for (let i = 0; i<length; i++) {
     let firstSpich = preferences[i] - 1;
     if (firstSpich === i) continue;
@@ -14,10 +14,10 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
     let thirdSpich = preferences[secondSpich] - 1;
     if (thirdSpich === secondSpich) continue;
     if (thirdSpich === i) {
-      count++;
+      sum++;
     }
   }
-    return count/3;
+    return sum/3;
 
    
 }
